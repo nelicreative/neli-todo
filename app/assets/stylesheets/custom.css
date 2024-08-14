@@ -1,0 +1,24 @@
+.navbar{
+    box-shadow: 3px 1px 2px 0px rgba(0, 0, 0, 0.12), 6px 3px 6px -5px rgba(0, 0, 0, 0.15) !important
+}
+
+.sidebar{
+    box-shadow: -6px 0px 9px 0px rgba(0, 0, 0, 0.56), 0 4px 10px 0px rgba(0, 0, 0, 0.12), -6px 2px 7px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control, .is-focused .form-control {
+    background-image: linear-gradient(to top, #9c27b000 2px, rgb(156 39 176 / 0%) 2px), linear-gradient(to top, #d2d2d200 1px, rgb(210 210 210 / 0%) 1px) !important;
+}
+
+.navbar-bg-custom{
+    background-color: #fafafa !important;
+}
+
+.logo-img{
+    width: 30px;
+    margin-right: 5px;
+}
+
+ul ul {
+    list-style: none;
+}

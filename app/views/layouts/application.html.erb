@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NeliTodoList</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <title> <%= full_title(yield(:title)) %> </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <%= render 'layouts/rails_default' %>
+    
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper ">
+      <%= render 'layouts/shared/side_bar' %>
+      <div class="main-panel">
+        <!-- Navbar -->
+        <%= render 'layouts/shared/top_nav_bar' %>
+        <!-- End Navbar -->
+        <div class="content">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        
+    </script>
+    <script>
+        
+    </script>
   </body>
 </html>
