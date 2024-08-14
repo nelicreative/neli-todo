@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workspace: one
+  assigner_id: 1
+  user_id: 1
+  multipriority: MyString
+  title: MyString
+  description: MyString
+  multitag: MyString
+  time_start: 2024-08-15 00:59:55
+  time_end: 2024-08-15 00:59:55
+  status: 1
+  deleted_at: 2024-08-15 00:59:55
+
+two:
+  workspace: two
+  assigner_id: 1
+  user_id: 1
+  multipriority: MyString
+  title: MyString
+  description: MyString
+  multitag: MyString
+  time_start: 2024-08-15 00:59:55
+  time_end: 2024-08-15 00:59:55
+  status: 1
+  deleted_at: 2024-08-15 00:59:55
