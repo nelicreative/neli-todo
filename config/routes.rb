@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root "staticpages#home"
   get  "/section",    to: 'staticpages#section'
   get  "/detail",    to: 'staticpages#detail'

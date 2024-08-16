@@ -10,10 +10,10 @@ gem "stimulus-rails", "1.0.4"
 gem "jbuilder", "2.11.5"
 gem "puma", "5.6.4"
 gem "bootsnap", "1.12.0", require: false
-group :development, :test do
-gem "sqlite3", "1.4.2"
-gem "debug", "1.5.0", platforms: %i[ mri mingw x64_mingw ]
-end
+gem 'acts-as-taggable-on' #Adds tagging functionality to models in Rails
+gem 'devise'
+gem "pg", "1.3.5" #Use postgresql
+gem 'dotenv-rails' #Read ENV
 group :development do
 gem "web-console", "4.2.0"
 end
@@ -26,9 +26,6 @@ gem "minitest", "5.15.0"
 gem "minitest-reporters", "1.5.0"
 gem "guard", "2.18.0"
 gem "guard-minitest", "2.4.6"
-end
-group :production do
-gem "pg", "1.3.5"
 end
 # Windows does not include zoneinfo files, so bundle the tzinfodata gem.
 # Uncomment the following line if you're running Rails

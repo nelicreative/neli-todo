@@ -1,24 +1,64 @@
-# README
+# Neli To Do List
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby Version
 
-Things you may want to cover:
+This application requires Ruby version 3.1.2. Ensure that you have the correct Ruby version installed. You can use [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://rvm.io/) to manage Ruby versions.
 
-* Ruby version
+## Configuration
 
-* System dependencies
+1. **Clone the repository:**
 
-* Configuration
+    ```bash
+    git clone https://github.com/nelicreative/neli-todo
+    cd neli-todo
+    ```
 
-* Database creation
+2. **Install Ruby dependencies:**
 
-* Database initialization
+    ```bash
+    bundle install
+    ```
 
-* How to run the test suite
+3. **Configure the database:**
 
-* Services (job queues, cache servers, search engines, etc.)
+    Create a `.env` file in the root directory of the project and add your database configuration. You can use the `.env.example` file as a reference:
 
-* Deployment instructions
+    ```bash
+    cp .env.example .env
+    ```
 
-* ...
+    Update `.env` with your PostgreSQL database credentials.
+
+4. **Create and migrate the database:**
+
+    ```bash
+    bin/rails db:create
+    bin/rails db:migrate
+    bin/rails db:seed
+    ```
+
+5. **Install JavaScript dependencies:**
+
+    ```bash
+    yarn install
+    ```
+
+6. **Precompile assets (if needed):**
+
+    ```bash
+    bin/rails assets:precompile
+    ```
+
+## Database Creation
+
+To create the database, run:
+
+    ```bash
+    bin/rails db:create
+    ```
+To set up the database with the necessary tables and seed data, run:
+
+    ```bash
+    bin/rails db:migrate
+    bin/rails db:seed
+    ```

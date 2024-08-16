@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workspace: one
+  user: one
+  deleted_at: 2024-08-15 00:59:48
+
+two:
+  workspace: two
+  user: two
+  deleted_at: 2024-08-15 00:59:48

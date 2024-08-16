@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workspace: one
+  name: MyString
+  slack_channel: MyString
+  is_private: 1
+  deleted_at: 2024-08-15 01:00:02
+
+two:
+  workspace: two
+  name: MyString
+  slack_channel: MyString
+  is_private: 1
+  deleted_at: 2024-08-15 01:00:02
