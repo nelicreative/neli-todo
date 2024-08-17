@@ -13,30 +13,23 @@
             <p>Thêm Workspace</p>
           </a>
       </li>
+      <% @workspaces.each do |w| %>
       <li class="nav-item ">
-          <%= link_to root_path, class: 'nav-link' do %>
-          <i class="material-icons">dashboard</i>
-          <p>Home</p>
-        <% end %>
-        <ul>
-          <li class="nav-item ">
-            <%= link_to detail_path, class: 'nav-link' do %>
-            <i class="material-icons">bubble_chart</i>
-            <p>Detail</p>
-            <% end %>
-          </li>
-        </ul>
+        <%# link_to section_path, class: 'nav-link' do %>
+        <a href="#" class="nav-link">
+          <div class="d-flex justify-content-between">
+            <i class="material-icons">library_books</i>
+            <span class="w-75"><%= w.name %></span>
+            <i class="material-icons add-item">add</i>
+          </div>
+        </a>
+        <%# end %>
       </li>
-      <li class="nav-item ">
-        <%= link_to section_path, class: 'nav-link' do %>
-          <i class="material-icons">content_paste</i>
-          <p>Todo List</p>
-        <% end %>
-      </li>
-      <li class="nav-item ">
+      <% end %>
+      <li class="nav-item " >
         <%= link_to history_path, class: 'nav-link' do %>
-          <i class="material-icons">library_books</i>
-          <p>History</p>
+          <i class="material-icons">content_paste</i>
+          <p>section</p>
         <% end %>
       </li>
       
