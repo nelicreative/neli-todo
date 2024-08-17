@@ -18,5 +18,13 @@ module NeliTodoList
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # Where the I18n library should search for translation files
+    # config.I18n.load_path += Dir[Rails.root.join('lib', 'locales', '*.{rb,yml}')]
+
+    # Permitted locales available for the application
+    # config.I18n.available_locales = [:en, :vi]
+
+    # Set default locale to something other than :en
+    # config.I18n.default_locale = :vi
   end
 end

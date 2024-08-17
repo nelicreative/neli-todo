@@ -1,0 +1,42 @@
+vi:
+  errors:
+    template:
+      header:
+        one: "1 lỗi đã ngăn %{model} được lưu lại"
+        other: "%{count} lỗi đã ngăn %{model} được lưu lại"
+    attributes:
+      workspace:
+        required: "Trường Workspace là bắt buộc"
+    messages:
+      required: "bắt buộc"
+  activerecord:
+    models:
+      task: "Nhiệm vụ"
+    errors:
+      models:
+        task:
+          attributes:
+            workspace:
+              required: "Trường Workspace là bắt buộc"
+      messages:
+        required: "bắt buộc"    
+  tasks:
+    new:
+      title: "Tạo nhiệm vụ mới"
+      label:
+        title: "Tiêu đề"
+        description: "Mô tả"
+        status: "Trạng thái"
+        start: "Bắt đầu"
+        end: "Đến hạn"
+      placeholder:
+        title: "Tạo tiêu đề"
+        description: "Thêm mô tả"
+      submit: "Thêm"
+    index:
+      title: "Danh sách nhiệm vụ"
+  date:
+    order:
+      - :day
+      - :month
+      - :year
