@@ -29,12 +29,15 @@ vi:
         status: "Trạng thái"
         start: "Bắt đầu"
         end: "Đến hạn"
+        priority: "Độ ưu tiên"
       placeholder:
         title: "Tạo tiêu đề"
         description: "Thêm mô tả"
       submit: "Thêm"
     index:
       title: "Danh sách nhiệm vụ"
+      button:
+        add: "Thêm"
   date:
     order:
       - :day
