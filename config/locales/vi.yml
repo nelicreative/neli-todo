@@ -35,8 +35,12 @@ vi:
       submit: "Thêm"
     index:
       title: "Danh sách nhiệm vụ"
+      noData: "Không có dữ liệu khớp với tìm kiếm!!!"
   date:
     order:
       - :day
       - :month
       - :year
+  time:
+    formats:
+      long: "%H:%M %d/%m/%Y"

@@ -7,31 +7,64 @@
           Thêm
         <% end %>
       </div>
-        
-      <ul>
-        <% @tasks.each do |task| %>
-          <div id="task-<%= task.id %>">
-            <div class="row">
-              <div class="col-4">
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="task-<%= task.id %>-checkbox" <%= task.status == 1 ? 'checked' : '' %>>
-                  <label class="form-check-label text-dark" for="task-<%= task.id %>-checkbox">
-                    <% if task.status == 1 %>
-                      <del><%= task.title %></del>
-                    <% else %>
-                      <%= task.title %>
-                    <% end %>
-                  </label>
+      
+      <% if params[:search].present? %>
+        <% if @tasks.any? %>
+          <ul>
+            <% @tasks.each do |task| %>
+              <div id="task-<%= task.id %>">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="task-<%= task.id %>-checkbox" <%= task.status == 1 ? 'checked' : '' %>>
+                      <label class="form-check-label text-dark" for="task-<%= task.id %>-checkbox">
+                        <% if task.status == 1 %>
+                          <del><%= task.title %></del>
+                        <% else %>
+                          <%= task.title %>
+                        <% end %>
+                      </label>
+                    </div>
+                    <p><%= task.description %></p>
+                  </div>
+                  <div class="col-6">
+                    <%= l(task.time_start, format: :long) %> -- <%= l(task.time_end, format: :long) %>
+                  </div>
                 </div>
-                <p><%= task.description %></p>
               </div>
-              <div class="col-6">
-                <%= task.time_start.strftime('%B %d, %Y %H:%M') %> -- <%= task.time_end.strftime('%B %d, %Y %H:%M') %>
-              </div>
-            </div>
+            <% end %>
+          </ul>
+        <% else %>
+          <div class="d-flex justify-content-center">
+            <p><%= t('.noData')%></p>
           </div>
         <% end %>
-      </ul>
+      <% else %>
+        <ul>
+          <% @tasks.each do |task| %>
+            <div id="task-<%= task.id %>">
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="task-<%= task.id %>-checkbox" <%= task.status == 1 ? 'checked' : '' %>>
+                    <label class="form-check-label text-dark" for="task-<%= task.id %>-checkbox">
+                      <% if task.status == 1 %>
+                        <del><%= task.title %></del>
+                      <% else %>
+                        <%= task.title %>
+                      <% end %>
+                    </label>
+                  </div>
+                  <p><%= task.description %></p>
+                </div>
+                <div class="col-6">
+                  <%= l(task.time_start, format: :long) %> -- <%= l(task.time_end, format: :long) %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </ul>
+      <% end %>
     </section>
   </aside>
 </div>

@@ -4,6 +4,12 @@ class TasksController < ApplicationController
     @tasks = current_user.tasks
   end
   
+  def search
+    @search = TaskSearch.new(params[:search])
+    @tasks = @search.scope.where(user_id: current_user.id)
+    render :index
+  end
+
   def new
     @task = current_user.tasks.build
   end

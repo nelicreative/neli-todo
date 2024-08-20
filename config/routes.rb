@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   get  "/section",    to: 'staticpages#section'
   get  "/detail",    to: 'staticpages#detail'
   get  "/history",    to: 'staticpages#history'
-  resources :tasks, only: [:create, :index, :new]
+  resources :tasks, only: [:create, :index, :new] do
+    collection do
+      get :search
+    end
+  end
 end

@@ -35,8 +35,12 @@ en:
       submit: "Add"
     index:
       title: "Task List"
+      noData: "No data found matching your search!!!"
   date:
     order:
       - :day
       - :month
       - :year
+  time:
+    formats:
+      long: "%H:%M %B %d, %Y "

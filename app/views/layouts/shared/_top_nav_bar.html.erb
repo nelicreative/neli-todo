@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-absolute fixed-top ">
   <div class="container-fluid">
     <div class="collapse navbar-collapse justify-content-start">
-      <form class="navbar-form navbar-bg-custom w-50 border rounded border-light">
-        <div class="form-inline my-2 my-lg-0 ">
+      <%= form_tag search_tasks_path, method: :get, remote: true, class: 'navbar-form navbar-bg-custom w-50 border rounded border-light' do %>
+        <div class="form-inline my-2 my-lg-0 position-relative">
           <i class="material-icons mx-2">search</i>
-          <input type="search" value="" class="form-control mr-sm-2 w-75 search-input" placeholder="Tìm kiếm">
+          <%= text_field_tag 'search', params[:search], placeholder: 'Tìm kiếm', class: 'form-control mr-sm-2 w-50 search-input' %>
         </div>
-      </form>
+      <% end %>
     </div>
     <div class="collapse navbar-collapse justify-content-end">
       <ul class="navbar-nav">
