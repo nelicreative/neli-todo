@@ -43,9 +43,9 @@
       </div>
     </div>
 
-    <div id="selected-tags">
+    <div class="selected-tags">
       <strong>Tag:</strong>
-      <div id="selected-tags-container">
+      <div class="selected-tags-container">
         <% if @task.tag_list.present? %>
           <% @task.tag_list.each do |tag| %>
             <span class="selected-tag" data-tag="<%= tag %>">
@@ -55,10 +55,10 @@
           <% end %>
         <% end %>
       </div>
-      <%= form.hidden_field :tag_list, id: 'tag_list_field' %>
+      <%= form.hidden_field :tag_list, class: 'tag-list-field' %>
     </div>
 
-    <div id="available-tags" class="mt-3">
+    <div class="available-tags mt-3">
       <% @tags.each do |tag| %>
         <span class="tag" data-tag="<%= tag.name %>" style="background-color: <%= random_color %>"><%= tag.name %></span>
       <% end %>

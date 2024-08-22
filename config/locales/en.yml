@@ -38,6 +38,8 @@ en:
       title: "Task List"
       button:
         add: "Add"
+    create:
+      success: "Task was successfully created."
   date:
     order:
       - :day

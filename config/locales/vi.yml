@@ -38,6 +38,8 @@ vi:
       title: "Danh sách nhiệm vụ"
       button:
         add: "Thêm"
+    create:
+      success: "Tạo công việc thành công."
   date:
     order:
       - :day

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const selectedTagsContainer = document.getElementById('selected-tags-container');
-  const availableTagsContainer = document.getElementById('available-tags');
-  const tagListField = document.getElementById('tag_list_field');
+  const selectedTagsContainer = document.querySelector('.selected-tags-container');
+  const availableTagsContainer = document.querySelector('.available-tags');
+  const tagListField = document.querySelector('.tag-list-field');
 
   function updateTagList() {
     const selectedTags = Array.from(selectedTagsContainer.querySelectorAll('.selected-tag'));

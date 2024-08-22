@@ -11,11 +11,9 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.build(task_params)
     @task.workspace_id = 1 # Assuming the workspace ID is fixed or passed in some other way
-    logger.debug "Task before save: #{@task.inspect}"
     if @task.save
-      redirect_to tasks_path, notice: 'Task was successfully created.'
+      redirect_to tasks_path, notice: t('tasks.create.success')
     else
-      logger.debug "Task save failed: #{@task.errors.full_messages.to_sentence}"
       render :new
     end
   end
