@@ -1,0 +1,11 @@
+Layout/IndentationConsistency:
+  Enabled: true
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+Layout/EmptyLines:
+  Enabled: true

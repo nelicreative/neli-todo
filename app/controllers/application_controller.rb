@@ -6,11 +6,11 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    @current_user = User.find_by(id: 2) || User.second # TODO handle it after implement login
+    @current_user = User.find_by(id: 2) || User.second # TODO: handle it after implement login
   end
 
   def set_workspaces
-    @workspaces = Workspace.all #just show for template
+    @workspaces = Workspace.all # just show for template
     # @workspaces = current_user.workspaces
   end
 

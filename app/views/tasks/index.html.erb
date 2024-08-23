@@ -2,17 +2,17 @@
   <aside>
     <section class="task">
       <div class="task-header d-flex justify-content-between">
-        <h3> <%= t('.title')%> </h3>
+        <h3> <%= t('.title') %> </h3>
         <%= link_to new_task_path, class: 'btn btn-primary' do %>
-          Thêm
+          <%= t('.button.add') %>
         <% end %>
       </div>
       
-      <% if params[:search].present? %>
+      <% if params[:search_text].present? || params[:search_date].present? %>
         <% if @tasks.any? %>
           <ul>
             <% @tasks.each do |task| %>
-              <div id="task-<%= task.id %>">
+              <div id="task-<%= task.id %>" class="task-item">
                 <div class="row">
                   <div class="col-4">
                     <div class="form-group form-check">
@@ -28,7 +28,7 @@
                     <p><%= task.description %></p>
                   </div>
                   <div class="col-6">
-                    <%= l(task.time_start, format: :long) %> -- <%= l(task.time_end, format: :long) %>
+                    <p> <%= display_task_time(task) %></p>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
       <% else %>
         <ul>
           <% @tasks.each do |task| %>
-            <div id="task-<%= task.id %>">
+            <div id="task-<%= task.id %>" class="task-item">
               <div class="row">
                 <div class="col-4">
                   <div class="form-group form-check">
@@ -58,7 +58,7 @@
                   <p><%= task.description %></p>
                 </div>
                 <div class="col-6">
-                  <%= l(task.time_start, format: :long) %> -- <%= l(task.time_end, format: :long) %>
+                  <p> <%= display_task_time(task) %></p>
                 </div>
               </div>
             </div>

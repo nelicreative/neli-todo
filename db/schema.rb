@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_14_180312) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_21_202651) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -115,16 +115,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_14_180312) do
     t.bigint "workspace_id", null: false
     t.integer "assigner_id"
     t.integer "user_id"
-    t.string "multipriority"
     t.string "title"
     t.string "description"
-    t.string "multitag", default: [], array: true
     t.datetime "time_start"
     t.datetime "time_end"
     t.integer "status"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "priority", default: 0
     t.index ["workspace_id"], name: "index_tasks_on_workspace_id"
   end
 
