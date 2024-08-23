@@ -6,7 +6,7 @@
     box-shadow: -6px 0px 9px 0px rgba(0, 0, 0, 0.56), 0 4px 10px 0px rgba(0, 0, 0, 0.12), -6px 2px 7px -5px rgba(0, 0, 0, 0.2) !important;
 }
 
-.form-control, .is-focused .form-control {
+.search-input, .is-focused .search-input {
     background-image: linear-gradient(to top, #9c27b000 2px, rgb(156 39 176 / 0%) 2px), linear-gradient(to top, #d2d2d200 1px, rgb(210 210 210 / 0%) 1px) !important;
 }
 
@@ -21,4 +21,29 @@
 
 ul ul {
     list-style: none;
+}
+
+.form-check .form-check-input{
+    opacity: 1 !important;
+    width: 15px !important;
+    height: 15px !important;
+    z-index: 99 !important;
+}
+
+.nav-link .add-item{
+    font-size: 18px !important;
+    height: 30px;
+    background-color: #efefef;
+    border-radius: 30px;
+    border: 2px dashed gray;
+    &:hover{
+        color: purple !important;
+        border: 2px dashed purple;
+        background-color: #fafafa;
+    }
+}
+
+.task-header{
+    margin: 20px 0;
+    height: 50px;
 }

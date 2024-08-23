@@ -118,7 +118,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_14_180312) do
     t.string "multipriority"
     t.string "title"
     t.string "description"
-    t.string "multitag"
+    t.string "multitag", default: [], array: true
     t.datetime "time_start"
     t.datetime "time_end"
     t.integer "status"
