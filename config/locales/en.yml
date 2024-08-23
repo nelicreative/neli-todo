@@ -29,12 +29,17 @@ en:
         status: "Status"
         start: "Start"
         end: "Due"
+        priority: "Priority"
       placeholder:
         title: "Create a title"
         description: "Add a description"
       submit: "Add"
     index:
       title: "Task List"
+      button:
+        add: "Add"
+    create:
+      success: "Task was successfully created."
   date:
     order:
       - :day
