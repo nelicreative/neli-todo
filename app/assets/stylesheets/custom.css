@@ -125,3 +125,7 @@ ul ul {
 .priority-container span {
   color: #007bff;
 }
+
+.btn-edit:focus, .btn-edit:active, .btn-edit:hover{
+  box-shadow: none !important;
+}

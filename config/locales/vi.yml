@@ -23,6 +23,11 @@ vi:
   tasks:
     new:
       title: "Tạo nhiệm vụ mới"
+      submit: "Thêm"
+    edit:
+      title: "Thay đổi nhiệm vụ"
+      submit: "Cập nhật"
+    form:
       label:
         title: "Tiêu đề"
         description: "Mô tả"
@@ -33,7 +38,6 @@ vi:
       placeholder:
         title: "Tạo tiêu đề"
         description: "Thêm mô tả"
-      submit: "Thêm"
     index:
       title: "Danh sách nhiệm vụ"
       button:

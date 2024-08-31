@@ -23,6 +23,11 @@ en:
   tasks:
     new:
       title: "Create New Task"
+      submit: "Add"
+    edit:
+      title: "Edit Task"
+      submit: "Update"
+    form:
       label:
         title: "Title"
         description: "Description"
@@ -33,7 +38,6 @@ en:
       placeholder:
         title: "Create a title"
         description: "Add a description"
-      submit: "Add"
     index:
       title: "Task List"
       button:
