@@ -11,58 +11,16 @@
       <% if params[:search_text].present? || params[:search_date].present? %>
         <% if @tasks.any? %>
           <ul>
-            <% @tasks.each do |task| %>
-              <div id="task-<%= task.id %>" class="task-item">
-                <div class="row">
-                  <div class="col-4">
-                    <div class="form-group form-check">
-                      <input type="checkbox" class="form-check-input" id="task-<%= task.id %>-checkbox" <%= task.status == 1 ? 'checked' : '' %>>
-                      <label class="form-check-label text-dark" for="task-<%= task.id %>-checkbox">
-                        <% if task.status == 1 %>
-                          <del><%= task.title %></del>
-                        <% else %>
-                          <%= task.title %>
-                        <% end %>
-                      </label>
-                    </div>
-                    <p><%= task.description %></p>
-                  </div>
-                  <div class="col-6">
-                    <p> <%= display_task_time(task) %></p>
-                  </div>
-                </div>
-              </div>
-            <% end %>
+            <%= render 'tasks/task' %>
           </ul>
         <% else %>
           <div class="d-flex justify-content-center">
-            <p><%= t('.noData')%></p>
+            <p><%= t('.noData') %></p>
           </div>
         <% end %>
       <% else %>
         <ul>
-          <% @tasks.each do |task| %>
-            <div id="task-<%= task.id %>" class="task-item">
-              <div class="row">
-                <div class="col-4">
-                  <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="task-<%= task.id %>-checkbox" <%= task.status == 1 ? 'checked' : '' %>>
-                    <label class="form-check-label text-dark" for="task-<%= task.id %>-checkbox">
-                      <% if task.status == 1 %>
-                        <del><%= task.title %></del>
-                      <% else %>
-                        <%= task.title %>
-                      <% end %>
-                    </label>
-                  </div>
-                  <p><%= task.description %></p>
-                </div>
-                <div class="col-6">
-                  <p> <%= display_task_time(task) %></p>
-                </div>
-              </div>
-            </div>
-          <% end %>
+          <%= render 'tasks/task' %>
         </ul>
       <% end %>
     </section>

@@ -1,7 +1,7 @@
 <div class="container bg-white rounded p-4">
   <h3><%= t('.title') %></h3>
 
-  <%= form_with(model: @task, url: tasks_path, local: true) do |form| %>
+  <%= form_with(model: @task, url: task_path(@task), local: true) do |form| %>
     <%= render 'tasks/form', form: form %>
     <%= form.submit t('.submit'), class: "btn btn-primary" %>
   <% end %>

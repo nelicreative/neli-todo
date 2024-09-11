@@ -23,4 +23,3 @@
 //= require material-dashboard.js
 //= require task_tags.js
 //= require datetimepicker.js
-
