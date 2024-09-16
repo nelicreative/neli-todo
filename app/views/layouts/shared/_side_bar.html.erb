@@ -1,38 +1,31 @@
 <div class="sidebar" data-color="purple" data-background-color="white" data-image=<%= asset_path('sidebar-1.jpg') %>>
 <div class="logo">
-    <a href="#" class="simple-text logo-normal">
+    <a href="/" class="simple-text logo-normal">
       <img class="logo-img" src=<%= asset_path('logo.png') %> alt="Neli-logo"/>
       Neli todo list
     </a>
   </div>
   <div class="sidebar-wrapper">
     <ul class="nav">
-      <li class="nav-item active">
+      <li class="nav-item active mb-4">
           <a href="#" class="nav-link">
             <i class="material-icons">add</i>
             <p>Thêm Workspace</p>
           </a>
       </li>
-      <% @workspaces.each do |w| %>
-      <li class="nav-item ">
-        <%# link_to section_path, class: 'nav-link' do %>
-        <a href="#" class="nav-link">
-          <div class="d-flex justify-content-between">
-            <i class="material-icons">library_books</i>
-            <span class="w-75"><%= w.name %></span>
-            <i class="material-icons add-item">add</i>
-          </div>
-        </a>
-        <%# end %>
-      </li>
-      <% end %>
-      <li class="nav-item " >
-        <%= link_to history_path, class: 'nav-link' do %>
-          <i class="material-icons">content_paste</i>
-          <p>section</p>
+      <% if @workspaces.present? %>
+        <% @workspaces.each do |w| %>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <div class="d-flex justify-content-between">
+                <i class="material-icons">library_books</i>
+                <span class="w-75"><%= w.name %></span>
+                <i class="material-icons add-item">add</i>
+              </div>
+            </a>
+          </li>
         <% end %>
-      </li>
-      
+      <% end %>
     </ul>
   </div>
 </div>

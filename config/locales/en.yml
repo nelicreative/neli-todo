@@ -53,3 +53,7 @@ en:
   time:
     formats:
       long: "%H:%M %B %d, %Y "
+  profiles:
+    update:
+      success: 'Profile updated successfully'
+      failure: 'Error updating profile'

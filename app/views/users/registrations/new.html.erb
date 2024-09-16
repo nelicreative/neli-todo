@@ -1,0 +1,34 @@
+<div class="container bg-white rounded p-5 d-flex flex-column align-items-center">
+  <%= render "users/shared/logo_branch" %>
+  <h2 class="font-weight-bold">Sign up</h2>
+
+  <div class="w-50">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
+
+      <div class="form-group">
+        <%= f.label :email, class: "text-dark" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded p-2 border w-100"  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, class: "text-dark" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "rounded p-2 border w-100"  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, class: "text-dark" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "rounded p-2 border w-100"  %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up", class: 'btn btn-primary w-100' %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "users/shared/links" %>
+</div>
