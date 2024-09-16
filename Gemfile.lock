@@ -104,8 +104,19 @@ GEM
       dotenv (= 3.1.2)
       railties (>= 6.1)
     erubi (1.13.0)
+    faraday (2.11.0)
+      faraday-net_http (>= 2.0, < 3.4)
+      logger
+    faraday-mashify (0.1.1)
+      faraday (~> 2.0)
+      hashie
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (3.3.0)
+      net-http
     ffi (1.17.0)
     formatador (1.1.0)
+    gli (2.21.5)
     globalid (1.2.1)
       activesupport (>= 6.1)
     guard (2.18.0)
@@ -121,6 +132,7 @@ GEM
     guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    hashie (5.0.0)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.0)
@@ -134,6 +146,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.6.1)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -154,7 +167,10 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     msgpack (1.7.2)
+    multipart-post (2.4.1)
     nenv (0.3.0)
+    net-http (0.4.1)
+      uri
     net-imap (0.4.14)
       date
       net-protocol
@@ -261,6 +277,12 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     shellany (0.0.1)
+    slack-ruby-client (2.4.0)
+      faraday (>= 2.0)
+      faraday-mashify
+      faraday-multipart
+      gli
+      hashie
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -283,6 +305,7 @@ GEM
     tzinfo-data (1.2024.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.5.0)
+    uri (0.13.1)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -326,6 +349,7 @@ DEPENDENCIES
   rubocop
   sassc-rails (= 2.1.2)
   selenium-webdriver (= 4.2.0)
+  slack-ruby-client
   sprockets-rails (= 3.4.2)
   stimulus-rails (= 1.0.4)
   turbo-rails (= 1.1.1)

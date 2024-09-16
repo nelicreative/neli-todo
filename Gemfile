@@ -16,6 +16,7 @@ gem 'sprockets-rails', '3.4.2'
 gem 'stimulus-rails', '1.0.4'
 gem 'turbo-rails', '1.1.1'
 gem 'aasm'
+gem 'slack-ruby-client'
 group :development do
   gem 'web-console', '4.2.0'
 end
