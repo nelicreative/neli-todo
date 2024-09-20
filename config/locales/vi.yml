@@ -53,3 +53,8 @@ vi:
   time:
     formats:
       long: "%H:%M %d/%m/%Y"
+  vi:
+  profiles:
+    update:
+      success: 'Cập nhật hồ sơ thành công'
+      failure: 'Có lỗi xảy ra khi cập nhật hồ sơ'
