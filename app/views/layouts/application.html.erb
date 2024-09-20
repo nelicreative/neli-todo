@@ -8,17 +8,31 @@
   </head>
 
   <body>
-    <div class="wrapper ">
-      <%= render 'layouts/shared/side_bar' %>
-      <div class="main-panel">
-        <!-- Navbar -->
-        <%= render 'layouts/shared/top_nav_bar' %>
-        <!-- End Navbar -->
-        <div class="content">
+    <% unless user_signed_in? %>
+      <div class="wrapper bg-white">
+        <div class="content p-0 m-0">
+          <% if notice %>
+            <p class="notice alert-danger text-danger text-center py-2"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+          <p class="alert bg-danger text-white text-center"><%= alert %></p>
+          <% end %>
           <%= yield %>
         </div>
       </div>
-    </div>
+    <% else %>
+      <div class="wrapper">
+        <%= render 'layouts/shared/side_bar' %>
+        <div class="main-panel">
+          <!-- Navbar -->
+          <%= render 'layouts/shared/top_nav_bar' %>
+          <!-- End Navbar -->
+          <div class="content">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    <% end %>
     
   </body>
 </html>

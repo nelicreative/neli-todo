@@ -1,0 +1,21 @@
+<div class="container bg-white rounded p-5 d-flex flex-column align-items-center">
+  <%= render "users/shared/logo_branch" %>
+  <h2 class="font-weight-bold">Resend confirmation instructions</h2>
+
+  <div class="w-50">
+    <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
+
+      <div class="form-group">
+        <%= f.label :email, class: "text-dark" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded p-2 border w-100" , value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Resend confirmation instructions", class: 'btn btn-primary w-100' %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render "users/shared/links" %>
+</div>
